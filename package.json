@@ -1,0 +1,27 @@
+{
+  "name": "vuepress-demo",
+  "version": "1.0.0",
+  "description": "vuepress demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "start": "npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@vuepress/plugin-active-header-links": "^1.7.1",
+    "@vuepress/plugin-google-analytics": "^1.7.1",
+    "@vuepress/plugin-pwa": "^1.7.1",
+    "@vuepress/theme-blog": "^2.3.2",
+    "vuepress": "^1.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
