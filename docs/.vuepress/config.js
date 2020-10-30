@@ -29,34 +29,84 @@ module.exports = {
   themeConfig: { // 为当前的主题提供一些配置，这些选项依赖于你正在使用的主题
     // logo: '/assets/img/logo.png',
     displayAllHeaders: true,
-    nav: [
-      {text: 'Home', link: '/'},
-      {text: 'vue', link: '/vue/vue1'},
-      {text: 'ts', link: '/typescript/ts1'},
-      {
-        text: 'js',
-        ariaLabel: 'js Menu',
-        items: [
-          {text: 'js1', link: '/javascript/js1'},
-          {text: 'es6', link: '/javascript/es6/es6-1'}
-        ]
-      }
-    ],
+    nav: [{
+      text: '栈内技术',
+      link: '/browser/',
+      items: [
+        {text: '浏览器', link: '/browser/'},
+        {text: 'es6+', link: '/es6/'}
+      ],
+      items: [{
+        text: '浏览器',
+        items: [{
+          text:'浏览器',
+          link: '/browser/',
+        }]
+        },{
+          text: '浏览器',
+          items: [{
+            text:'浏览器',
+            link: '/browser/',
+          }]
+        },
+      ]
+    },{
+      text: '栈外技术',
+      link: '/javascript/',
+      items: [
+        {text: 'js1', link: '/javascript/'},
+        {text: 'es6+', link: '/es6/'}
+      ]
+    },{
+      text: '项目工程',
+      link: '/vue/',
+      items: [
+        {text: 'js1', link: '/javascript/'},
+        {text: 'es6+', link: '/es6/es6-1'}
+      ]
+    },{
+      text: '其他技术',
+      ariaLabel: 'js Menu',
+      items: [
+        {text: 'js1', link: '/javascript/'},
+        {text: 'es6+', link: '/es6/es6-1'}
+      ]
+    },{
+      text:'Github',
+      link: 'https://github.com/Gavinqhk'
+    }],
     sidebar: {
-      collapsable: false,
+      '/browser/': [{
+        title: '浏览器',
+        collapsable: false,
+        children: []
+      }],
       '/typescript/': [{
           title: 'typescript',
-          path: '',
-          children: [
-            {title: 'ts1', path: 'ts1'},
-            {title: 'ts2', path: 'ts2'}
+          collapsable: false,
+          initialOpenGroupIndex: -1,
+          children: [{
+              title: 'ts1', 
+              path: 'ts1',
+              collapsable: true,
+            },{
+              title: 'ts2',
+              path: 'ts2'
+            }
           ]
-        }
-      ],
-      '/vue/': [
-        'vue1',
-        'vue2'
-      ]
+      }],
+      '/vue/': [{
+        title: 'vue',
+        collapsable: false,
+        children: [
+          {
+            title: 'vue1', 
+            path: 'vue1',
+            collapsable: true,
+          },
+          {title: 'vue2', path: 'vue2'}
+        ]
+    }]
     }
   },
   plugins: {// 插件配置
