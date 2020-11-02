@@ -30,47 +30,162 @@ module.exports = {
     // logo: '/assets/img/logo.png',
     displayAllHeaders: true,
     nav: [{
-      text: '栈内技术',
-      link: '/browser/',
-      items: [
-        {text: '浏览器', link: '/browser/'},
-        {text: 'es6+', link: '/es6/'}
-      ],
+      text: '基础',
       items: [{
+        text: '前端3基础',
+        items: [{
+          text:'HTML/HTML5',
+          link: '/html/',
+        },{
+          text:'CSS/CSS3',
+          link: '/css/',
+        },{
+          text:'JS',
+          link: '/javascript/',
+        }]
+      },{
         text: '浏览器',
+        link: '/browser/',
         items: [{
           text:'浏览器',
           link: '/browser/',
         }]
+      }]
+    },{
+      text: '栈内',
+      items: [{
+        text: '框架',
+        items: [{
+          text:'Vue',
+          link: '/vue/',
         },{
-          text: '浏览器',
-          items: [{
-            text:'浏览器',
-            link: '/browser/',
-          }]
-        },
-      ]
+          text:'React',
+          link: '/react/',
+        },{
+          text:'Uni-app',
+          link: '/uniapp/',
+        },{
+          text:'Flutter',
+          link: '/flutter/',
+        }]
+      },{
+        text: '必学',
+        items:[{
+          text: 'sass/less/stylus',
+          link: '/sls/'
+        },{
+          text: 'ES6+',
+          link: '/ecmaScript/'
+        },{
+          text: 'typeScript',
+          link: '/typescript/'
+        },{
+          text: 'nodejs',
+          link: '/nodejs/'
+        },{
+          text: 'webpack',
+          link: '/webpack/'
+        }]
+      },{
+        text: '网络知识',
+        items:[{
+          text: 'http/https',
+          link: '/http/'
+        },{
+          text: 'TCP/IP/UDP',
+          link: '/tcpipudp/'
+        },{
+          text: 'Socket/WebSocket',
+          link: '/websocket/'
+        },{
+          text: 'DNS/CDN',
+          link: '/dnscdn/'
+        },{
+          text: '网络安全',
+          link: '/networksafe/'
+        },]
+      },]
     },{
-      text: '栈外技术',
-      link: '/javascript/',
-      items: [
-        {text: 'js1', link: '/javascript/'},
-        {text: 'es6+', link: '/es6/'}
-      ]
+      text: '栈外',
+      items: [{
+        text: '服务器知识',
+        items:[{
+          text: 'Docker',
+          link: '/docker/'
+        },{
+          text: 'Ngnix',
+          link: '/ngnix/'
+        },{
+          text: 'Linux',
+          link: '/linux/'
+        }]
+      },{
+        text: 'webGL',
+        items: [{
+          text: 'three.js',
+          link: '/threejs/'
+        },{
+          text: 'Thing.js-3d城市应用',
+          link: '/thingjs/'
+        }]
+      },{
+        text: '大数据',
+        items: [{
+          text: 'Python',
+          link: '/python/'
+        }]
+      },{
+        text: '其他',
+        items: [{
+          text: '前端智能',
+          link: '/ai/'
+        },{
+          text: '模板渲染',
+          link: '/tempRender/'
+        },{
+          text: '物联网',
+          link: '/iot/'
+        }]
+      }]
     },{
-      text: '项目工程',
-      link: '/vue/',
-      items: [
-        {text: 'js1', link: '/javascript/'},
-        {text: 'es6+', link: '/es6/es6-1'}
-      ]
-    },{
-      text: '其他技术',
-      ariaLabel: 'js Menu',
-      items: [
-        {text: 'js1', link: '/javascript/'},
-        {text: 'es6+', link: '/es6/es6-1'}
-      ]
+      text: '项目',
+      items: [{
+        text: '项目管理',
+        items:[{
+          text: 'git',
+          link: '/git/'
+        },{
+          text: 'git flow',
+          link: '/gitflow/'
+        }]
+      },{
+        text: '工程化',
+        items:[{
+          text: 'CI/CD',
+          link: '/cicd/'
+        },{
+          text: 'jenkins',
+          link: '/jenkins/'
+        }]
+      },{
+        text: '技术选型/架构设计',
+        items:[{
+          text: '技术架构',
+          link: '/jsjg/'
+        }]
+      },{
+        text: '优化/测试',
+        items:[{
+          text: '性能优化',
+          link: '/xnyh/'
+        },{
+          text: '日志监控',
+          link: '/rzjk/'
+        },{
+          text: '测试',
+          link: '/test/'
+        }]
+      }]
     },{
       text:'Github',
       link: 'https://github.com/Gavinqhk'
@@ -82,18 +197,18 @@ module.exports = {
         children: []
       }],
       '/typescript/': [{
-          title: 'typescript',
-          collapsable: false,
-          initialOpenGroupIndex: -1,
-          children: [{
-              title: 'ts1', 
-              path: 'ts1',
-              collapsable: true,
-            },{
-              title: 'ts2',
-              path: 'ts2'
-            }
-          ]
+        title: 'typescript',
+        collapsable: false,
+        initialOpenGroupIndex: -1,
+        children: [{
+            title: 'ts1',
+            path: 'ts1',
+            collapsable: true,
+          },{
+            title: 'ts2',
+            path: 'ts2'
+          }
+        ]
       }],
       '/vue/': [{
         title: 'vue',
@@ -107,7 +222,10 @@ module.exports = {
           {title: 'vue2', path: 'vue2'}
         ]
     }]
-    }
+    },
+    // 添加侧边栏
+    // sidebar: 'auto',
+    // sidebarDepth: 2
   },
   plugins: {// 插件配置
 		'@vuepress/active-header-links': {
